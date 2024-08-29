@@ -3,9 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.PromoSignal.API", "POC.PromoSignal.API\POC.PromoSignal.API.csproj", "{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{B35CBA40-9FC8-4C9E-ADC9-EDA320AA473A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Service", "2 - Service", "{3B7E5C08-4854-4DF3-9B7A-BCA3A20D6C5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.PromoSignal.Service", "POC.PromoSignal.Service\POC.PromoSignal.Service.csproj", "{68B916AD-83D7-4415-8B67-3E728E0E68FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{2AB64536-2392-4812-96E4-F1F4CADA92C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.PromoSignal.Domain", "POC.PromoSignal.Domain\POC.PromoSignal.Domain.csproj", "{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B916AD-83D7-4415-8B67-3E728E0E68FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B916AD-83D7-4415-8B67-3E728E0E68FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B916AD-83D7-4415-8B67-3E728E0E68FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B916AD-83D7-4415-8B67-3E728E0E68FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B9105BE0-F3EF-4DB0-B696-BDB69333BFF1} = {B35CBA40-9FC8-4C9E-ADC9-EDA320AA473A}
+		{68B916AD-83D7-4415-8B67-3E728E0E68FE} = {3B7E5C08-4854-4DF3-9B7A-BCA3A20D6C5C}
+		{ABE13160-3B4E-43F9-A0B6-BCD77D9A7510} = {2AB64536-2392-4812-96E4-F1F4CADA92C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F771A74-C6BB-4B1C-8875-6663A39BE3CB}
