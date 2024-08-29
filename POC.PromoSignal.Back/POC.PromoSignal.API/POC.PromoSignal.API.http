@@ -1,0 +1,6 @@
+@POC.PromoSignal.API_HostAddress = http://localhost:5109
+
+GET {{POC.PromoSignal.API_HostAddress}}/promo/
+Accept: application/json
+
+###

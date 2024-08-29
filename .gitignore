@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/POC.PromoSignal.Back/.vs/POC.PromoSignal.Back
+/POC.PromoSignal.Back/POC.PromoSignal.API/obj
+/POC.PromoSignal.Back/POC.PromoSignal.Domain/obj
+/POC.PromoSignal.Back/POC.PromoSignal.Service/obj
