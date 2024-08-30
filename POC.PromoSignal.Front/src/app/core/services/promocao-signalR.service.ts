@@ -46,4 +46,20 @@ export class PromocaoSignalRService {
             this.connection.on('receberPromocao', (promocao: Promocao) => observer.next(promocao));
         });
     }
+
+    closeConnection(): Observable<void> {
+        return new Observable<void>(observer => {
+            this.connection.stop()
+                .then(() => {
+                    console.info("hub disconnect");
+
+                    observer.next();
+                    observer.complete();
+                })
+                .catch((error => {
+                    console.error(error);
+                    observer.error();
+                }));
+        });
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { PromocaoForm } from "./models/promocaoForm";
 
@@ -11,16 +11,20 @@ import { switchMap } from "rxjs";
   templateUrl: './cadastro-promocao.component.html',
   styleUrls: ['./cadastro-promocao.component.scss']
 })
-export class CadastroPromocaoComponent implements OnInit {
+export class CadastroPromocaoComponent implements OnInit, OnDestroy {
   formPromocao: FormGroup<PromocaoForm>;
   messageCadastro: string;
+
+  constructor(private fb: FormBuilder, private promoSignalRService: PromocaoSignalRService) { }
 
   ngOnInit(): void {
     this.loadForm();
     this.startSignalR();
   }
 
-  constructor(private fb: FormBuilder, private promoSignalRService: PromocaoSignalRService) { }
+  ngOnDestroy(): void {
+    this.promoSignalRService.closeConnection().subscribe();
+  }
 
   loadForm() {
     this.formPromocao = this.fb.group({
