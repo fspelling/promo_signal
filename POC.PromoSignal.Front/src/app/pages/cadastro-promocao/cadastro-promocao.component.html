@@ -1,18 +1,19 @@
-<div class="container container-login">
+<div class="w-50 container text-center mt-5">
     <img src="assets/images/tag.png" />
     <br />
     <h1>REAL-PROMO</h1>
-    <div class="container-form">
-        <input class="form-control" type="text" placeholder="Empresa" />
-        <br />
-        <input type="text" placeholder="Chamada" />
-        <br />
-        <input type="text" placeholder="Regras" />
-        <br />
-        <input type="text" placeholder="Endereço(URL)" />
-        
-        <div class="container-button">
-            <input class="btn btn-primary" type="button" value="CADASTRAR" />
+    <form [formGroup]="formPromocao" (submit)="salvar()">
+        <input class="form-control m-2" type="text" placeholder="Empresa" formControlName="empresa" />
+        <input class="form-control m-2" type="text" placeholder="Chamada" formControlName="chamada" />
+        <input class="form-control m-2" type="text" placeholder="Regras" formControlName="regras" />
+        <input class="form-control m-2" type="text" placeholder="Endereço(URL)" formControlName="enderecoUrl" />
+
+        <div class="text-end">
+            <input class="btn btn-primary" type="submit" value="CADASTRAR" [disabled]="formPromocao.invalid" />
         </div>
+    </form>
+
+    <div class="text-center">
+        <h4 class="text-success">{{messageCadastro}}</h4>
     </div>
 </div>

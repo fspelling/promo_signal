@@ -8,7 +8,7 @@ namespace POC.PromoSignal.API.Hubs
     {
         public async Task CadastrarPromocao(Promocao promocao)
         {
-            await Clients.Caller.SendAsync("cadastradoSucesso");
+            await Clients.Caller.SendAsync("cadastradoSucesso", "cadastro realizado com sucesso");
             await Clients.Others.SendAsync("receberPromocao", promocao);
         }
     }

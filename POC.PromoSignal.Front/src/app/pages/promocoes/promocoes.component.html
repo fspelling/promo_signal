@@ -1,0 +1,19 @@
+<div class="container-login">
+    <div *ngFor="let promo of listPromocoes" class="container-promo">
+        <div class="container-chamada">
+            <h1>{{promo.empresa}}</h1>
+            <p>{{promo.chamada}}</p>
+            <p>{{promo.regras}}</p>
+        </div>
+
+        <div class="container-botao">
+            Pegar
+        </div>
+    </div>
+
+    <span>*Todas as promoções tem um prazo de 1 hora.</span>
+
+    <div class="m-2">
+        <a class="btn btn-light" routerLink="/">Voltar</a>
+    </div>
+</div>

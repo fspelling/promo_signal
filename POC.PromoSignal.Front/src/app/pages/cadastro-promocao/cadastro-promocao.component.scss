@@ -1,7 +1,3 @@
-input[type=text] {
-    max-width: 690px;
-}
-
-.container-login {
-    color: black;
+::ng-deep body {
+    background-color: white !important;
 }
